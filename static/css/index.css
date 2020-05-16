@@ -16,7 +16,7 @@ header {
 }
 
 input {
-    width: 80%;
+    width: 60%;
     border-radius: 1.5rem;
     padding: 1rem;
     text-align: center;
@@ -40,9 +40,8 @@ h3 {
 
 form {
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    height: 100vh;
+    flex-direction: column;
 }
 
 strong {
@@ -54,12 +53,15 @@ p {
 }
 
 #footer {
-    position: fixed;
+    /* position: fixed; */
     text-align: center;
-    left: 0;
-    bottom: 0;
     width: 100%;
-    padding: 5% 5%;
+    padding: 1% 1%;
+}
+
+#save {
+    text-align: center;
+    padding: 15% 15%;
 }
 
 ::placeholder {
@@ -74,7 +76,7 @@ p {
 .report-inputs {
     height: 600px;
     margin-top: 2%;
-    margin-left: 15%;
+    margin-left: 28%;
     overflow-y: auto;
 }
 
@@ -111,9 +113,12 @@ p {
 }
 
 .btn-success {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     margin-right: 5%;
-    margin-left: 25%;
-    margin-top: 5%;
+    margin-left: 15%;
+    margin-top: 2%;
     padding: 1rem;
     border-radius: 1rem;
     width: 30%;
@@ -124,22 +129,36 @@ p {
     padding: 1rem;
 }
 
+.btn-info {
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
 .newbtn {
     display: flex;
     justify-content: center;
 }
 
-.new-border {
-    height: 700px;
-    border-radius: 1.5rem;
-    border: 1px solid white;
+.loks {
+    width: auto;
+    margin-top: 20%;
+    margin-left: 70%;
+}
+
+.back {
+    margin-left: 5%;
+    border-radius: 0.5rem;
+}
+
+.whatsnew {
+    margin-top: 10%;
 }
 
 /* Media Queries */
 
 @media (max-width: 2000px) {
     form {
-        height: 90vh;
+        height: 100vh;
     }
 }
 
@@ -157,7 +176,10 @@ p {
 
 @media (max-width: 780px) {
     form {
-        height: 55vh;
+        height: 70vh;
+    }
+    .alert {
+        width: 300px;
     }
 }
 
@@ -165,16 +187,60 @@ p {
     .report-inputs {
         margin-bottom: 47%;
     }
+    .alert {
+        width: 400px;
+    }
 }
 
 @media (max-width: 480px) {
     form {
         height: 100vh;
     }
+    input {
+        width: 300px;
+    }
+
+    .report-inputs {
+        width: 100%;
+        margin-top: 10%;
+        margin-left: 10%;
+    }
+
+    body {
+        background: linear-gradient(360deg, #0779e4, #0779e4);
+    }
+
+    .btn-success {
+        margin-top: 5%;
+        margin-left: 25%;
+    }
+    .alert {
+        width: 300px;
+    }
+    }
 }
 
 @media (max-width: 385px) {
     form {
-        height: 80vh;
+        height: 100vh;
+    }
+    input {
+        width: 300px;
+    }
+    .report-inputs {
+        width: 100%;
+        height: 700px;
+        margin-top: 10%;
+        margin-left: 8%;
+    }
+    body {
+        background: linear-gradient(360deg, #0779e4, #0779e4);
+    }
+    .btn-success {
+        margin-top: 5%;
+        margin-left: 28%;
+    }
+    .alert {
+        width: 300px;
     }
 }

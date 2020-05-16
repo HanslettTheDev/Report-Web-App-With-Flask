@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+{% block title %}
+<title>Saved Reports</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+{% endblock title %}
+
+{% block content %}
+<div class="col-lg-12 new-border">
+    <h3>Saved Reports Here</h3>
+    <div class="box">
+    <section id="back">
+    <a href="/reports"><button class="btn btn-dark back"><i class="fa fa-step-backward" aria-hidden="true"></i> Go Back</button></a>
+</section>
+        <div class="reports">
+            <hr>
+        {% for report in reports %}
+            <h2>{{ report.report_name }}</h2>
+            <p><strong>Hrs:</strong>{{ report.report_hrs }}|</p>
+            <p><strong>Vid:</strong>{{ report.report_vid }}|</p>
+            <p><strong>Rv:</strong>{{ report.report_rv }}|</p>
+            <p><strong>Bs:</strong>{{ report.report_bs }}|</p>
+            <p><strong>Plc:</strong>{{ report.report_plc }}|</p>
+            <p><strong>Min:</strong>{{ report.report_min }}|</p>
+            <div class="edit-delete">
+            <a href="/reports/edit/{{report.id}}"><button class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button></a>
+            <a href="/reports/delete/{{report.id}}"><button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button></a>
+            </div>
+            <hr>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

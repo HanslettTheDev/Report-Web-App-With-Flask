@@ -9,48 +9,27 @@
 <div class="container">
     <div class="row">
         <!-- first div -->
-        <div class="col-lg-6 new-border">
-            <form action="/reports" method="POST">
+        <div class="col-lg-12 new-border">
+            <form action="/Saved Reports" method="POST">
             <div class="form-container">
                 <h3>Fill Your Report Here</h3>
+                <hr style="border: 1px solid white;">
                 <div class="report-inputs">
-                    <input type="text" name="r-name" id="r-name" placeholder="Report Name" maxlength="50" required />
+                    <div id="error-text" role="alert"></div>
+                    <input type="text" name="r-name" id="r-name" placeholder="Report Name" maxlength="50" />
                     <input type="date" name="r-date" id="r-date" required />
                     <input type="number" name="hrs" id="hrs" placeholder="Hours" required />
                     <input type="number" name="vid" id="vid" placeholder="Videos" required />
                     <input type="number" name="rv" id="rv" placeholder="Return Visits" required />
                     <input type="number" name="bs" id="bs" placeholder="Bible Studies" required />
                     <input type="number" name="plc" id="plc" placeholder="Placement" required />
-                    <input type="number" name="min" id="min" placeholder="Minutes" max="59" required />
-                    <input class="btn btn-success" type="submit" value="Save">
-                </div>
-            </div>
-        </form>
-    </div>
-
-        <!-- second div -->
-        <div class="col-lg-6 new-border">
-            <h3>Saved Reports Here</h3>
-            <div class="box">
-                <div class="reports">
-                {% for report in reports %}
-                    <h2>{{ report.report_name }}</h2>
-                    <p><strong>Hrs:</strong>{{ report.report_hrs }}|</p>
-                    <p><strong>Vid:</strong>{{ report.report_vid }}|</p>
-                    <p><strong>Rv:</strong>{{ report.report_rv }}|</p>
-                    <p><strong>Bs:</strong>{{ report.report_bs }}|</p>
-                    <p><strong>Plc:</strong>{{ report.report_plc }}|</p>
-                    <div class="edit-delete">
-                    <a href="/reports/edit/{{report.id}}"><button class="btn btn-warning"><i class="fas fa-edit"></i> Edit</button></a>
-                    <a href="/reports/delete/{{report.id}}"><button class="btn btn-danger"><i class="fas fa-trash"></i> Delete</button></a>
+                    <input type="number" name="min" id="min" placeholder="Minutes" required />
+                    <button id="btn-alert" class="btn btn-success" type="submit">Save</button>
                     </div>
-                    <hr>
-                    {% endfor %}
+                    <hr style="border: 1px solid white;">
                 </div>
-            </div>
+            </form>
         </div>
-
-        <!-- close divs -->
-        </div>
-    </div> 
+    </div>
+</div> 
 {% endblock content %}
