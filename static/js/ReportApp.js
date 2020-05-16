@@ -5,12 +5,6 @@ const reportRv = document.getElementById('rv');
 const reportBs = document.getElementById('bs');
 const reportMin = document.getElementById('min');
 const text = document.getElementById('error-text');
-// const version = document.getElementById('version');
-
-// events and Callback event functions
-// function versionAlert() {
-//     alert('Whats New In v' + version.value + ' Field Service Report App');
-// }
 
 formEvent.addEventListener('click', function (event) {
     let errorMessages = [];
