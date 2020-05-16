@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+<title>Edit Report</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/edit.css') }}" />
+{% endblock title %}
+
+{% block content %}
+<div class="form-container">
+    <form action="/reports/edit/{{reports.id}}" method="POST">
+        <h3>Edit Your Report Here</h3>
+            <input type="text" name="r-name" id="r-name" value="{{reports.report_name}}" placeholder="Report Name" required />
+            <input type="date" value="{{reports.report_date}}" name="r-date" id="r-date"/>
+            <input type="number" name="hrs" id="hrs" value="{{reports.report_hrs}}" placeholder="Hours" required />
+            <input type="number" name="vid" id="vid" value="{{reports.report_vid}}" placeholder="Videos" required />
+            <input type="number" name="rv" id="rv" value="{{reports.report_rv}}" placeholder="Return Visits" required />
+            <input type="number" name="bs" id="bs" value="{{reports.report_bs}}" placeholder="Bible Studies" required />
+            <input type="number" name="plc" id="plc" value="{{reports.report_plc}}" placeholder="Placement" required />
+            <input type="number" name="min" id="min" value="{{reports.report_min}}" placeholder="Minutes" required />
+            <input id="btn-alert" class="btn btn-success save" type="submit" value="Save">
+</form>
+</div>
+{% endblock content %}

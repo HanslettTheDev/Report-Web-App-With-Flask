@@ -1,0 +1,27 @@
+{% extends 'layout.html' %} 
+
+{% block title %}
+
+<title>FS Report</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}" />
+
+{% endblock title %} 
+
+{% block content %}
+
+<header>
+    <h1>Field Service Report App</h1><br>
+</header>
+<div class="newbtn">
+    <a href="/reports"><button class="btn btn-primary"><i class="fas fa-edit"></i> Create A Report</button></a>
+</div>
+
+<section id="footer">
+<div class="container">
+    <p>Made by <strong>@HanslettTheDev</strong></p>
+</div>
+</footer>
+</section>
+
+
+{% endblock content %}

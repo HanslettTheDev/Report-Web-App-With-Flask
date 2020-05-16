@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(90deg, #0779e4, #fda085);
+    color: white;
+    font-family: sans-serif;
+}
+
+header {
+    text-align: center;
+    margin-top: 20%;
+}
+
+input {
+    width: 80%;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    text-align: center;
+    letter-spacing: 1px;
+    outline: none;
+}
+
+input:focus {
+    border: 1px solid rgb(0, 132, 255);
+}
+
+h2 {
+    color: white;
+    font-weight: 700;
+}
+
+h3 {
+    padding-top: 5%;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+strong {
+    color: rgb(216, 216, 216);
+}
+
+p {
+    font-weight: bold;
+}
+
+#footer {
+    position: fixed;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 5% 5%;
+}
+
+::placeholder {
+    font-weight: 700;   
+}
+
+.form-container {
+    width: 100%;
+    height: 600px;
+}
+
+.report-inputs {
+    height: 600px;
+    margin-top: 2%;
+    margin-left: 15%;
+    overflow-y: auto;
+}
+
+.box {
+    height: 600px;
+    overflow-y: auto;
+    border-radius: 1rem;
+}
+
+.box h3 {
+    color: red;
+}
+
+.box p {
+    display: inline-block;
+    color: black;
+}
+
+.reports {
+    margin-left: 5%;
+}
+
+.edit-delete {
+    display: flex;
+    justify-content: end;
+}
+
+.btn-warning {
+    border-radius: 1rem;
+}
+
+.btn-danger {
+    border-radius: 1rem;
+}
+
+.btn-success {
+    margin-right: 5%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 1rem;
+    border-radius: 1rem;
+    width: 30%;
+}
+
+.btn-primary {
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.newbtn {
+    display: flex;
+    justify-content: center;
+}
+
+.new-border {
+    height: 700px;
+    border-radius: 1.5rem;
+    border: 1px solid white;
+}
+
+/* Media Queries */
+
+@media (max-width: 2000px) {
+    form {
+        height: 90vh;
+    }
+}
+
+@media (max-width: 1100px) {
+    form {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 830px) {
+    form {
+        height: 50vh;
+    }
+}
+
+@media (max-width: 780px) {
+    form {
+        height: 55vh;
+    }
+}
+
+@media (max-width: 680px) {
+    .report-inputs {
+        margin-bottom: 47%;
+    }
+}
+
+@media (max-width: 480px) {
+    form {
+        height: 100vh;
+    }
+}
+
+@media (max-width: 385px) {
+    form {
+        height: 80vh;
+    }
+}
