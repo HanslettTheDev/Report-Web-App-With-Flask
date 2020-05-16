@@ -160,17 +160,26 @@ p {
     form {
         height: 100vh;
     }
+    .alert {
+        width: 450px;
+    }
 }
 
 @media (max-width: 1100px) {
     form {
         height: 100vh;
     }
+    .alert {
+        width: 400px;
+    }
 }
 
 @media (max-width: 830px) {
     form {
         height: 50vh;
+    }
+    .alert {
+        width: 350px;
     }
 }
 
