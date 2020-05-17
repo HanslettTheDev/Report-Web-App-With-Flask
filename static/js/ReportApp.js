@@ -14,7 +14,8 @@ formEvent.addEventListener('click', function (event) {
     }
 
     if (reportMin.value > 60) {
-        alert(reportMin.value + ' Minutes Is higher Than 1 Hour! Just Add To Your Hours');
+        errorMessages.push(reportMin.value + ' Minutes Is higher Than 1 Hour! Just Add To Your Hours');
+        text.className += "alert alert-danger";
     }
 
     if (reportBs.value > reportRv.value) {
